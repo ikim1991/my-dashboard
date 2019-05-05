@@ -1,0 +1,27 @@
+html,body,h1,h2,h3,h4,h5,span,p {
+  font-family: "Raleway", sans-serif
+}
+
+nav {
+  overflow-y: auto
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

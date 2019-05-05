@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<title>myDashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<!-- Loads data as object datatypes into our webpage from data.js file -->
+<script src="../data/data.js"></script>
+
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item">My Dashboard</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-border-right" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-blue">
+    <h5>Indeed Job Postings</h5>
+  </div>
+  <div class="w3-bar-block">
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:21px">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:21px">
+    <h5><b>My Dashboard</b></h5>
+  </header>
+
+  <div>
+    <!-- Changes the data being displayed by onmouseover event -->
+    <div class="w3-bar w3-blue">
+      <button class="w3-bar-item w3-button" onmouseover="openIndicator('^GSPTSE')">^GSPTSE</button>
+      <button class="w3-bar-item w3-button" onmouseover="openIndicator('^GSPC')">^GSPC</button>
+      <button class="w3-bar-item w3-button" onmouseover="openIndicator('BTCUSD')">BTCUSD</button>
+      <button class="w3-bar-item w3-button" onmouseover="openIndicator('ETHUSD')">ETHUSD</button>
+      <button class="w3-bar-item w3-button" onmouseover="openIndicator('USDCAD')">CADUSD</button>
+      <button class="w3-bar-item w3-button" onmouseover="openIndicator('Crude')">CRUDE OIL</button>
+    </div>
+
+    <!-- Initializes the display of our indicator buttons listed above -->
+    <div class="w3-container w3-white">
+      <h5><b class="indicator header"></b></h5>
+      <span class="indicator price"><span class="indicator change"></span></span><br>
+      <span class="indicator maw"></span><br>
+      <span class="indicator mam"></span><br>
+      <span class="indicator maa"></span><br><br>
+    </div>
+  </div>
+
+  <!-- Initializes the weekly Metro deals -->
+  <div class="w3-twothird" style="height: 690px; overflow-y: scroll">
+    <div class="w3-border">
+      <h5 class="w3-center"><b>Metro: Deals of the Week</b></h5>
+      <table class="w3-table w3-striped w3-red">
+      </table>
+    </div>
+  </div>
+
+  <!-- Initializes our watchlist of our stock picks -->
+  <div class="w3-third" style="height: 690px; overflow-y: scroll">
+    <div class="w3-border">
+      <h5 class="w3-center"><b>Watchlist</b></h5>
+      <table class="w3-table w3-striped w3-blue">
+      </table>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Loads our main.js file for add functionality to our webpage -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
